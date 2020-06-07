@@ -36,7 +36,7 @@ Things you may want to cover:
 <!-- groupsテーブル -->
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, unique: true|
 |user_id|integer|null: false, foreign_key: true|
 - has_many :messages
 - has_many :groups_users
@@ -47,15 +47,15 @@ Things you may want to cover:
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |groups_id|integer|null: false, foreign_key: true|
-- belongs_to :users
-- belongs_to :groups
+- belongs_to :user
+- belongs_to :group
 
 <!-- messageテーブル -->
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
-|image|string|null: false|
+|body|text||
+|image|string||
 |user_id|integer|null: false, foreign_key: true|
 |groups_id|integer|null: false, foreign_key: true|
-- belongs_to :users
-- belongs_to :groups
+- belongs_to :user
+- belongs_to :group
