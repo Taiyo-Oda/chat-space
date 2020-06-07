@@ -44,8 +44,8 @@ Things you may want to cover:
 <!-- groups_usersテーブル -->
 |Column|Type|Options|
 |------|----|-------|
-|users|references|null: false, foreign_key: true|
-|groups|references|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 - belongs_to :user
 - belongs_to :group
 
@@ -54,7 +54,7 @@ Things you may want to cover:
 |------|----|-------|
 |body|text||
 |image|string||
-|users|references|null: false, foreign_key: true|
-|groups|references|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 - belongs_to :user
 - belongs_to :group
