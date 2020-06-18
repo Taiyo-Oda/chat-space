@@ -10,6 +10,7 @@
 
 $main_white: #ffffff;
 
+
 .wrapper {
   display: flex;
 
@@ -171,7 +172,7 @@ $main_white: #ffffff;
         width: 100px;
         margin-left: 15px;
         background-color: #38aef0;
-        color: $main_whitef;
+        color: $main_white;
       }
     }
   }
