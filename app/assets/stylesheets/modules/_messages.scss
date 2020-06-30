@@ -48,26 +48,26 @@ $main_white: #ffffff;
     &__main {
       height: calc(100vh - 100px);
       background-color: #2f3e51;
+      overflow: scroll;
       .group__info {
         height: 91px;
         padding: 20px 20px 0;
-        &--name {
-          height: 15px;
-          width: 260px;
+        .group__link {
+          text-decoration: none;
           color: $main_white;
-          margin-bottom: 5px;
-          font-weight: bold;
-          font-size: 15px;
-          line-height: 15px;
-        }
-        &--message {
-          height: 11px;
-          width: 260px;
-          color: $main_white;
-          margin-bottom: 40px;
-          font-weight: bold;
-          font-size: 11px;
-          line-height: 11px;
+          .group__info--name {
+            height: 15px;
+            width: 260px;
+            margin-bottom: 5px;
+            font-size: 15px;
+            line-height: 15px;
+          }
+          .group__info--message {
+            height: 11px;
+            width: 260px;
+            font-size: 11px;
+            line-height: 11px;
+          }
         }
       }
     }
@@ -81,6 +81,7 @@ $main_white: #ffffff;
       background-color: $main_white;
       display: flex;
       justify-content: space-between;
+      border-bottom: solid 1px #eee;
       &--left {
         width: 150px;
         margin-left: 40px;
@@ -114,8 +115,8 @@ $main_white: #ffffff;
     &__chat {
       height: calc(100vh - 190px);
       background-color: #fafafa;
+      overflow: scroll;
       &--message {
-        height: 100%;
         padding-top: 35px;
         margin-left: 40px;
         .message__info {
@@ -143,25 +144,28 @@ $main_white: #ffffff;
     }
     &__footer {
       height: 90px;
+      width: 100%;
       background-color: #d2d2d2;
       @include flexbox_center;
-      .input__box {
+      .form {
         display: flex;
-        position: relative;
-        .message__form {
-          height: 50px;
-          width: calc(100vw - 495px);
-          background-color: hsl(0, 0%, 100%);
-          padding: 0 40px 0 10px;
-        }
-        .image__icon {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          height: 30px;
-          width: 20px;
-          text-align: center;
-          line-height: 30px;
+        .input__box {
+          position: relative;
+          .message__form {
+            height: 50px;
+            width: calc(100vw - 495px);
+            background-color: hsl(0, 0%, 100%);
+            padding: 0 40px 0 10px;
+          }
+          .image__icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            height: 30px;
+            width: 20px;
+            text-align: center;
+            line-height: 30px;
+          }
           .image__btn {
             display: none;
           }
